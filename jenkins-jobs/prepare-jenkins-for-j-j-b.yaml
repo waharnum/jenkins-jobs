@@ -1,0 +1,12 @@
+- job:
+    name: 'prepare-jenkins-for-j-j-b'
+    project-type: 'freestyle'
+    display-name: 'Prepare Jenkins for Jenkins Job Builder'
+    scm:
+        - git:
+            url: https://github.com/waharnum/jenkins-jobs.git
+            branches:
+                - master
+    builders:
+      - shell: virtualenv env
+      - shell: env/bin/pip install jenkins-job-builder --upgrade      

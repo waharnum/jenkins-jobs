@@ -1,0 +1,12 @@
+- job:
+    name: 'cut-and-distribute-fedora-22'
+    project-type: 'freestyle'
+    display-name: 'Cut and Distribute Fedora 22'
+    scm:
+        - git:
+            url: https://github.com/avtar/packer-fedora
+            branches:
+                - gnome3-changes
+    builders:
+      - shell: make virtualbox/fedora22-gnome3
+      - shell: rsync -avz --rsh="ssh -i /Users/waharnum/.ssh/cachefly_ssh_key" box/virtualbox/fedora22-nocm-1.0.15.box idrc@ftp.cachefly.com:/web/vagrant/

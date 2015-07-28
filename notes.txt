@@ -1,0 +1,3 @@
+# jenkins-jobs command
+
+jenkins-job-builder/env/bin/jenkins-jobs --conf jenkins_jobs.ini test cut-and-distribute-fedora-22.yaml
