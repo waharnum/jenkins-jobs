@@ -4,9 +4,9 @@
     display-name: 'Cut and Distribute Fedora 22'
     scm:
         - git:
-            url: https://github.com/avtar/packer-fedora
+            url: https://github.com/idi-ops/packer-fedora.git
             branches:
-                - gnome3-changes
+                - master
     builders:
       - shell: make virtualbox/fedora22-gnome3
-      - shell: rsync -avz --rsh="ssh -i /Users/waharnum/.ssh/cachefly_ssh_key" box/virtualbox/fedora22-nocm-1.0.15.box idrc@ftp.cachefly.com:/web/vagrant/
+      - shell: rsync -avz --rsh="ssh -i /Users/waharnum/.ssh/cachefly_ssh_key" box/virtualbox/idi-fedora22.box idrc@ftp.cachefly.com:/web/vagrant/
