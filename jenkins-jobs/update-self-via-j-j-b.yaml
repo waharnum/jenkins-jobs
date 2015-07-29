@@ -1,7 +1,7 @@
 - job:
-    name: 'prepare-jenkins-for-j-j-b'
+    name: 'update-self-via-j-j-b'
     project-type: 'freestyle'
-    display-name: 'Prepare Jenkins for Jenkins Job Builder'
+    display-name: 'Update Self Via Jenkins Job Builder'
     scm:
         - git:
             url: https://github.com/waharnum/jenkins-jobs.git
