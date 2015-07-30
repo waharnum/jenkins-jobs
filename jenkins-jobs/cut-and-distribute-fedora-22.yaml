@@ -11,4 +11,4 @@
       # Configure Makefile.local appropriately to run headless and specify packer binary location
       - shell: printf 'PACKER := /usr/local/bin/packer/packer\nHEADLESS := true\nISO_PATH := /var/isos' > /var/lib/jenkins/workspace/cut-and-distribute-fedora-22/Makefile.local
       - shell: make virtualbox/fedora22-gnome3
-      - shell: rsync -avz --rsh="ssh -i /Users/waharnum/.ssh/cachefly_ssh_key" box/virtualbox/idi-fedora22.box idrc@ftp.cachefly.com:/web/vagrant/
+      - shell: rsync -avz --rsh="ssh -i ~/.ssh/cachefly_ssh_key" box/virtualbox/idi-fedora22.box idrc@ftp.cachefly.com:/web/vagrant/
