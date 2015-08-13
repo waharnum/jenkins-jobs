@@ -7,7 +7,7 @@
             url: https://github.com/waharnum/jenkins-jobs.git
             branches:
                 - master
-    builders:
+    builders:      
       - shell: virtualenv env
       - shell: env/bin/pip install jenkins-job-builder --upgrade
       - shell: env/bin/jenkins-jobs --conf jenkins_jobs.ini update --delete-old ./jenkins-jobs
