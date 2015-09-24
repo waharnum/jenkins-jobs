@@ -13,5 +13,5 @@
       - shell: make virtualbox/fedora22-gnome3
       # generate sha256 sum
       - shell: sha256sum box/virtualbox/inclusivedesign-fedora22.box > box/virtualbox/inclusivedesign-fedora22.box.sha256sum.txt
-      - shell: rsync -avz --rsh="ssh -i /var/lib/jenkins/.ssh/cachefly_ssh_key" box/virtualbox/inclusivedesign-fedora22.box idrc@ftp.cachefly.com:/web/vagrant/
-      - shell: rsync -avz --rsh="ssh -i /var/lib/jenkins/.ssh/cachefly_ssh_key" box/virtualbox/inclusivedesign-fedora22.box.sha256sum.txt idrc@ftp.cachefly.com:/web/vagrant/
+      - shell: rsync -avz --rsh="ssh -i /var/lib/jenkins/.ssh/cachefly_ssh_key" box/virtualbox/inclusivedesign-fedora22.box idrc@ftp.cachefly.com:/web/virtual-machines/vagrant/
+      - shell: rsync -avz --rsh="ssh -i /var/lib/jenkins/.ssh/cachefly_ssh_key" box/virtualbox/inclusivedesign-fedora22.box.sha256sum.txt idrc@ftp.cachefly.com:/web/virtual-machines/vagrant/
